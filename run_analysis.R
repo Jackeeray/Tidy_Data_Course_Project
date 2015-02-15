@@ -38,7 +38,7 @@ Mean_STD_Feature_Data <-Featurenames$V2[grep("mean\\(\\)|std\\(\\)",Featurenames
 
 selectedNames<-c(as.character(Mean_STD_Feature_Data), "Subject", "Activity")
 Data <-subset(Data,select=selectedNames)
-str(Data)
+
 
 ##3.Uses descriptive activity names to name the activities in the data set
 Activity_Names <-read.table(file.path(fpath,"activity_labels.txt"),header=FALSE)
@@ -54,7 +54,7 @@ names(Data) <-sub("Acc","Accelerometer",names(Data))
 names(Data) <-sub("Gyro","Gyroscope",names(Data))
 names(Data) <-sub("Mag","Magnitude",names(Data))
 names(Data) <-sub("BodyBody","Body",names(Data))
-names(Data)
+
 
 ##5.creates a second, independent tidy data set with the creates a second, independent tidy data set with the average of each variable for each activity and each subject
 library(plyr)
