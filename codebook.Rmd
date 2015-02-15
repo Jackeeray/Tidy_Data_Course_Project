@@ -1,0 +1,120 @@
+---
+title: "Codebook"
+author: "Neetu Jackeeray"
+date: "February 13, 2015"
+output: html_document
+---
+#Original Data from [UCI Machine Learning Repository](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip )
+Contains Human Activity Recognition database built from the recordings of 30 subjects performing activities of daily living (ADL) while carrying a waist-mounted smartphone with embedded inertial sensors.
+
+Original data collected from the smartphones accelerometer and gyroscope 3-axial raw signals, further processed using various signal processing techniques resulting in a measurement vector with 561 features.
+
+For detailed description of the original dataset, refer to README.txt and features_info##.txt bundeled with the original data set zip archive. The original data set is split into training and test sets where each partition consists of three files that contain
+
+-the measurements from the accelerometer and gyroscope<br>
+-the labels for activity<br>
+-the subject identifiers<br>
+
+##Tidy Data
+Contains aggregated mean values of all mean and standard deviation values from original data set grouped by activity and subject.
+
+<b>Attribute Information:</b>
+
+Following are provided for each record in the tidy data :
+
+-Its activity label (one out of 6 different activities):<br>
+   \  .LAYING<br>
+  \   .SITTING<br>
+  \   .STANDING<br>
+   \  .WALKING<br>
+  \   .WALKING_DOWNSTAIR<br>
+   \  .WALKING_UPSTAIRS<br>
+
+-An identifier of the subject who carried out the experiment (30 different subjects, IDs ranging from {1,2,3,...,30}) <br>
+- Features with the<br>
+  \   .Mean of Triaxial acceleration from the accelerometer (total acceleration) and the      estimated body acceleration.<br>
+    \  .Mean of Triaxial Angular velocity from the gyroscope.<br>
+   \  .Numerical value ranging in [-1,1]<br>
+ 
+##Variable names
+
+.timeBodyAccelerometer.mean.x<br>
+.timeBodyAccelerometer.mean.y<br>
+.timeBodyAccelerometer.mean.z<br>
+.timeBodyAccelerometer.std.x<br>
+.timeBodyAccelerometer.std.y<br>
+.timeBodyAccelerometer.std.z<br>
+.timeGravityAccelerometer.mean.x<br>
+.timeGravityAccelerometer.mean.y<br>
+.timeGravityAccelerometer.mean.z<br>
+.timeGravityAccelerometer.std.x<br>
+.timeGravityAccelerometer.std.y<br>
+.timeGravityAccelerometer.std.z<br>
+.timeBodyAccelerometerJerk.mean.x<br>
+.timeBodyAccelerometerJerk.mean.y<br>
+.timeBodyAccelerometerJerk.mean.z<br>
+.timeBodyAccelerometerJerk.std.x<br>
+.timeBodyAccelerometerJerk.std.y<br>
+.timeBodyAccelerometerJerk.std.z<br>
+.timeBodyGyroscope.mean.x<br>
+.timeBodyGyroscope.mean.y<br>
+.timeBodyGyroscope.mean.z<br>
+.timeBodyGyroscope.std.x<br>
+.timeBodyGyroscope.std.y<br>
+.timeBodyGyroscope.std.z<br>
+.timeBodyGyroscopeJerk.mean.x<br>
+.timeBodyGyroscopeJerk.mean.y<br>
+.timeBodyGyroscopeJerk.mean.z<br>
+.timeBodyGyroscopeJerk.std.x<br>
+.timeBodyGyroscopeJerk.std.y<br>
+.timeBodyGyroscopeJerk.std.z<br>
+.timeBodyAccelerometerMagnitude.mean<br>
+.timeBodyAccelerometerMagnitude.std<br>
+.timeGravityAccelerometerMagnitude.mean<br>
+.timeGravityAccelerometerMagnitude.std<br>
+.timeBodyAccelerometerJerkMagnitude.mean<br>
+.timeBodyAccelerometerJerkMagnitude.std<br>
+.timeBodyGyroscopeMagnitude.mean<br>
+.timeBodyGyroscopeMagnitude.std<br>
+.timeBodyGyroscopeJerkMagnitude.mean<br>
+.timeBodyGyroscopeJerkMagnitude.std<br>
+.FrequencyBodyAccelerometer.mean.x<br>
+.FrequencyBodyAccelerometer.mean.y<br>
+.FrequencyBodyAccelerometer.mean.z<br>
+.FrequencyBodyAccelerometer.std.x<br>
+.FrequencyBodyAccelerometer.std.y<br>
+.FrequencyBodyAccelerometer.std.z<br>
+.FrequencyBodyAccelerometer.mean.freq.x<br>
+.FrequencyBodyAccelerometer.mean.freq.y<br>
+.FrequencyBodyAccelerometer.mean.freq.z<br>
+.FrequencyBodyAccelerometerJerk.mean.x<br>
+.FrequencyBodyAccelerometerJerk.mean.y<br>
+.FrequencyBodyAccelerometerJerk.mean.z<br>
+.FrequencyBodyAccelerometerJerk.std.x<br>
+.FrequencyBodyAccelerometerJerk.std.y<br>
+.FrequencyBodyAccelerometerJerk.std.z<br>
+.FrequencyBodyAccelerometerJerk.mean.freq.x<br>
+.FrequencyBodyAccelerometerJerk.mean.freq.y<br>
+.FrequencyBodyAccelerometerJerk.mean.freq.z<br>
+.FrequencyBodyGyroscope.mean.x<br>
+.FrequencyBodyGyroscope.mean.y<br>
+.FrequencyBodyGyroscope.mean.z<br>
+.FrequencyBodyGyroscope.std.x<br>
+.FrequencyBodyGyroscope.std.y<br>
+.FrequencyBodyGyroscope.mean.freq.x<br>
+.FrequencyBodyGyroscope.mean.freq.y<br>
+.FrequencyBodyGyroscope.mean.freq.z<br>
+.FrequencyBodyAccelerometerMagnitude.mean<br>
+.FrequencyBodyAccelerometerMagnitude.std<br>
+.FrequencyBodyAccelerometerMagnitude.mean.freq<br>
+.FrequencyBodyAccelerometerJerkMagnitude.mean<br>
+.FrequencyBodyAccelerometerJerkMagnitude.std<br>
+.FrequencyBodyAccelerometerJerkMagnitude.mean.freq<br>
+.FrequencyBodyGyroscopeMagnitude.mean<br>
+.FrequencyBodyGyroscopeMagnitude.std<br>
+.FrequencyBodyGyroscopeMagnitude.mean.freq<br>
+.FrequencyBodyGyroscopeJerkMagnitude.mean<br>
+.FrequencyBodyGyroscopeJerkMagnitude.std<br>
+.FrequencyBodyGyroscopeJerkMagnitude.mean.freq<br>
+.activity<br>
+.subject<br>
