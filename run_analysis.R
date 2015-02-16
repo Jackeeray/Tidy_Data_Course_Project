@@ -1,4 +1,6 @@
 
+##Creating directory and subdirectory if not present
+if(!file.exists("./NeetuCoursera/Get&CleanDataProject")){dir.create("./NeetuCoursera/Get&CleanDataProject")}
 ##downloading the zipped file and unzipping it
 fileurl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 download.file(fileurl,destfile="~/NeetuCoursera/Get&CleanDataProject/data.zip",method="curl")
