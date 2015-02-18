@@ -1,11 +1,11 @@
 
-##Creating directory and subdirectory if not present
-if(!file.exists("./NeetuCoursera/Get&CleanDataProject")){dir.create("./NeetuCoursera/Get&CleanDataProject")}
+##Creating data directory  if not present
+if(!file.exists("./data")){dir.create("./data")}
 ##downloading the zipped file and unzipping it
 fileurl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-download.file(fileurl,destfile="~/NeetuCoursera/Get&CleanDataProject/data.zip",method="curl")
-unzip(zipfile="~/NeetuCoursera/Get&CleanDataProject/data.zip",exdir="~/NeetuCoursera/Get&CleanDataProject")
-fpath <- "~/NeetuCoursera/Get&CleanDataProject/UCI HAR Dataset"
+download.file(fileurl,destfile="./data/data.zip",method="curl")
+unzip(zipfile="./data/data.zip",exdir="./data")
+fpath <- "./data/UCI HAR Dataset"
 
 
 ##reading Activity file from test and train
@@ -61,7 +61,7 @@ names(Data) <-sub("BodyBody","Body",names(Data))
 ##5.creates a second, independent tidy data set with the creates a second, independent tidy data set with the average of each variable for each activity and each subject
 library(plyr)
 Tidy_Data <-aggregate(. ~Subject + Activity,Data,mean)
-Tidy_Data<-Tidy_Data(order(Data$Subject,Data$Activity))
+Tidy_Data<-Tidy_Data[order(Data$Subject,Data$Activity)]
 ## writing tidy data to file
 write.table(Tidy_Data,file="Get_Clean_Assign.txt",sep=" ",row.names=FALSE)
 
