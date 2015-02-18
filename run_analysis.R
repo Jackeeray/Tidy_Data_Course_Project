@@ -61,7 +61,10 @@ names(Data) <-sub("BodyBody","Body",names(Data))
 ##5.creates a second, independent tidy data set with the creates a second, independent tidy data set with the average of each variable for each activity and each subject
 library(plyr)
 Tidy_Data <-aggregate(. ~Subject + Activity,Data,mean)
-Tidy_Data<-Tidy_Data[order(Data$Subject,Data$Activity)]
+
+## ordering by Subject and then Activity
+Tidy_Data <-arrange(Tidy_Data,Subject,Activity)
+##head(Tidy_Data)
 ## writing tidy data to file
 write.table(Tidy_Data,file="Get_Clean_Assign.txt",sep=" ",row.names=FALSE)
 
